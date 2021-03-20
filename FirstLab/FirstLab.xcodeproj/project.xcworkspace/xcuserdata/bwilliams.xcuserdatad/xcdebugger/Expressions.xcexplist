@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Triangle::Triangle(ClosedBrokenLine&amp;):Polygon.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "Vector::setLength(Point&amp;, Point&amp;):Vector.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "BrokenLine::BrokenLine(BrokenLine const&amp;):BrokenLine.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "Vector::cosAngle(Vector&amp;):Vector.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "p[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ClosedBrokenLine::ClosedBrokenLine(ClosedBrokenLine const&amp;):BrokenLine.hpp">
+      </ContextState>
+      <ContextState
+         contextName = "Triangle::sqare() const:Polygon.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "arr[1]">
+            </PersistentString>
+            <PersistentString
+               value = "arr[2]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RegularPolygon::RegularPolygon(ClosedBrokenLine const&amp;):Polygon.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "arr[3]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
