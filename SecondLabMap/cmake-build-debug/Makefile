@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7717.62/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
+RM = "/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7717.62/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap
+CMAKE_SOURCE_DIR = /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-S
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7717.62/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+	"/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7717.62/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,33 +143,6 @@ SecondLabMap/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondLabMap.dir/build.make CMakeFiles/SecondLabMap.dir/build
 .PHONY : SecondLabMap/fast
 
-Polynomial.o: Polynomial.cpp.o
-
-.PHONY : Polynomial.o
-
-# target to build an object file
-Polynomial.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondLabMap.dir/build.make CMakeFiles/SecondLabMap.dir/Polynomial.cpp.o
-.PHONY : Polynomial.cpp.o
-
-Polynomial.i: Polynomial.cpp.i
-
-.PHONY : Polynomial.i
-
-# target to preprocess a source file
-Polynomial.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondLabMap.dir/build.make CMakeFiles/SecondLabMap.dir/Polynomial.cpp.i
-.PHONY : Polynomial.cpp.i
-
-Polynomial.s: Polynomial.cpp.s
-
-.PHONY : Polynomial.s
-
-# target to generate assembly for a file
-Polynomial.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondLabMap.dir/build.make CMakeFiles/SecondLabMap.dir/Polynomial.cpp.s
-.PHONY : Polynomial.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -206,9 +179,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SecondLabMap"
-	@echo "... Polynomial.o"
-	@echo "... Polynomial.i"
-	@echo "... Polynomial.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

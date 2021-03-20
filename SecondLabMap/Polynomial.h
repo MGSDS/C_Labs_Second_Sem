@@ -54,10 +54,10 @@ public:
         return tmp;
     }
 
-    void operator+=(const Polynomial<T> &obj) {
+    Polynomial<T>* operator+=(const Polynomial<T> &obj) {
         std::unordered_map<size_t, T> tmp;
         tmp = this->coefficients;
-        for (std::pair<size_t, T> i : obj.coefficients) {
+        for (const std::pair<size_t, T>& i : obj.coefficients) {
             if (tmp.find(i.first) != tmp.end()) {
                 tmp.at(i.first) += i.second;
             } else {
@@ -68,12 +68,13 @@ public:
             }
         }
         coefficients = tmp.coefficients;
+        return *this;
     }
 
-    void operator-=(const Polynomial<T> &obj) {
+    Polynomial<T>* operator-=(const Polynomial<T> &obj) {
         std::unordered_map<size_t, T> tmp;
         tmp = this->coefficients;
-        for (std::pair<size_t, T> i : obj.coefficients) {
+        for (const std::pair<size_t, T>& i : obj.coefficients) {
             if (tmp.find(i.first) != tmp.end()) {
                 tmp.at(i.first) -= i.second;
             } else {
@@ -85,21 +86,23 @@ public:
 
         }
         coefficients = tmp.coefficients;
+        return *this;
     }
 
-    void operator*=(const Polynomial<T> &obj) {
+    Polynomial<T>* operator*=(const Polynomial<T> &obj) {
         std::unordered_map<size_t, T> tmp;
-        tmp = this->coefficients;
-        for (std::pair<size_t, T> i : obj.coefficients) {
-            if (tmp.find(i.first) != tmp.end()) {
-                tmp.at(i.first) *= i.second;
-                if (tmp.at(i.first) == 0) {
-                    tmp.erase(*tmp.at(i.first));
+        for (const std::pair<size_t, T>& i : obj.coefficients) {
+            for (const std::pair<size_t, T>& j : obj.coefficients) {
+                size_t newpow = i.first + j.first;
+                T newcoef = i.second * j.second;
+                if(newcoef != 0){
+                    tmp.insert(newpow, newcoef);
                 }
             }
         }
 
-        coefficients = tmp.coefficients;
+        coefficients = tmp;
+        return *this;
     }
 
     Polynomial<T> operator+(T n) {
@@ -178,7 +181,7 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const Polynomial<T> &obj) {
         for (auto i : obj.coefficients) {
             if (i.second > 0)
-                os << '+' << i.second << '*' << (i.first ? 'x' << '^' << i.first : 1);
+                os << '+' << i.second  << (i.first ? '*' << 'x' << '^' << i.first : 1);
             else if (i.second < 0)
                 os << i.second << '*' << 'x' << '^' << i.first;
         }

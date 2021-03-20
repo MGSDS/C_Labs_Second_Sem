@@ -1,3 +1,3 @@
-/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/SecondLabMap.dir
+/Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/SecondLabMap.dir

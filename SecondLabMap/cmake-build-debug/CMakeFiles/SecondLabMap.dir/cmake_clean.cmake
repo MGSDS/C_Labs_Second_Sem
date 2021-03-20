@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SecondLabMap.dir/Polynomial.cpp.o"
   "CMakeFiles/SecondLabMap.dir/main.cpp.o"
   "SecondLabMap"
   "SecondLabMap.pdb"

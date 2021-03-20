@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/Polynomial.cpp" "/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/SecondLabMap.dir/Polynomial.cpp.o"
-  "/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/main.cpp" "/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/SecondLabMap.dir/main.cpp.o"
+  "/Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/main.cpp" "/Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/SecondLabMap.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

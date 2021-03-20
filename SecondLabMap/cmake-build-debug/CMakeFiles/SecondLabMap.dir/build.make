@@ -54,19 +54,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7717.62/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
+RM = "/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7717.62/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap
+CMAKE_SOURCE_DIR = /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SecondLabMap.dir/depend.make
@@ -79,43 +79,28 @@ include CMakeFiles/SecondLabMap.dir/flags.make
 
 CMakeFiles/SecondLabMap.dir/main.cpp.o: CMakeFiles/SecondLabMap.dir/flags.make
 CMakeFiles/SecondLabMap.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SecondLabMap.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SecondLabMap.dir/main.cpp.o -c /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SecondLabMap.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SecondLabMap.dir/main.cpp.o -c /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/main.cpp
 
 CMakeFiles/SecondLabMap.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SecondLabMap.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/main.cpp > CMakeFiles/SecondLabMap.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/main.cpp > CMakeFiles/SecondLabMap.dir/main.cpp.i
 
 CMakeFiles/SecondLabMap.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SecondLabMap.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/main.cpp -o CMakeFiles/SecondLabMap.dir/main.cpp.s
-
-CMakeFiles/SecondLabMap.dir/Polynomial.cpp.o: CMakeFiles/SecondLabMap.dir/flags.make
-CMakeFiles/SecondLabMap.dir/Polynomial.cpp.o: ../Polynomial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SecondLabMap.dir/Polynomial.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SecondLabMap.dir/Polynomial.cpp.o -c /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/Polynomial.cpp
-
-CMakeFiles/SecondLabMap.dir/Polynomial.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SecondLabMap.dir/Polynomial.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/Polynomial.cpp > CMakeFiles/SecondLabMap.dir/Polynomial.cpp.i
-
-CMakeFiles/SecondLabMap.dir/Polynomial.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SecondLabMap.dir/Polynomial.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/Polynomial.cpp -o CMakeFiles/SecondLabMap.dir/Polynomial.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/main.cpp -o CMakeFiles/SecondLabMap.dir/main.cpp.s
 
 # Object files for target SecondLabMap
 SecondLabMap_OBJECTS = \
-"CMakeFiles/SecondLabMap.dir/main.cpp.o" \
-"CMakeFiles/SecondLabMap.dir/Polynomial.cpp.o"
+"CMakeFiles/SecondLabMap.dir/main.cpp.o"
 
 # External object files for target SecondLabMap
 SecondLabMap_EXTERNAL_OBJECTS =
 
 SecondLabMap: CMakeFiles/SecondLabMap.dir/main.cpp.o
-SecondLabMap: CMakeFiles/SecondLabMap.dir/Polynomial.cpp.o
 SecondLabMap: CMakeFiles/SecondLabMap.dir/build.make
 SecondLabMap: CMakeFiles/SecondLabMap.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable SecondLabMap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SecondLabMap"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SecondLabMap.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +113,6 @@ CMakeFiles/SecondLabMap.dir/clean:
 .PHONY : CMakeFiles/SecondLabMap.dir/clean
 
 CMakeFiles/SecondLabMap.dir/depend:
-	cd /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug /Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/SecondLabMap.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug /Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/cmake-build-debug/CMakeFiles/SecondLabMap.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SecondLabMap.dir/depend
 

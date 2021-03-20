@@ -6,13 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/Polynomial.cpp
-Polynomial.h
-/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/Polynomial.h
-
-/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/Polynomial.h
-stdio.h
--
+/Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/Polynomial.h
 string
 -
 sstream
@@ -20,9 +14,9 @@ sstream
 unordered_map
 -
 
-/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/main.cpp
+/Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/main.cpp
 iostream
 -
 Polynomial.h
-/Users/bwilliams/Documents/итмо/Labs/Prog/C-Labs-Second-Semester/SecondLabMap/Polynomial.h
+/Users/bwilliams/Documents/C-Labs-Second-Semester/SecondLabMap/Polynomial.h
 
