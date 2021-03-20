@@ -1,1 +1,1 @@
-# C_Labs_Second_Sem
+# C++ Labs Second Semester
