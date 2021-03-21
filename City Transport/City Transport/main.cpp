@@ -14,6 +14,7 @@
 int main(int argc, const char * argv[]) {
     std::string path;
     getline(std::cin, path);
+    auto start = std::chrono::system_clock::now();
     XmlReader reader(path);
     reader.read();
     std::vector<Stop> data = reader.getStopsVector();
@@ -36,5 +37,13 @@ int main(int argc, const char * argv[]) {
     std::cout << "Street with max stops count:" << std::endl;
     std::cout << "    " << maxStopsPerStreet.first << " stops count: " << maxStopsPerStreet.second << std::endl;
     
+    auto end = std::chrono::system_clock::now();
+    std::chrono::duration<double> elapsed_seconds = end-start;
+    std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+
+    std::cout << "finished computation at " << std::ctime(&end_time)
+            << "elapsed time: " << elapsed_seconds.count() << "s\n";
+    
     return 0;
 }
+

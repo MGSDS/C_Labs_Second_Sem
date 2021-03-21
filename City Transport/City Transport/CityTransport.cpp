@@ -41,7 +41,7 @@ std::vector<std::string>& splitstring::split(char delim, int rep) {
 XmlReader::XmlReader(const std::string& file_name){
     pugi::xml_parse_result result = doc.load_file(file_name.c_str());
     if (!result)
-        std::bad_exception();
+        throw std::bad_exception();
 }
 
 void XmlReader::read(){
@@ -83,22 +83,13 @@ std::vector<Stop> XmlReader::getStopsVector()const{
 Route::Route(const std::string& route, const std::string& vecType, std::vector<Stop>& data, std::map<std::string, size_t>& stopsPerLocation) : route_(route), vecType_(vecType), sz(0), length_(0){
     for (int i = 0; i < data.size(); ++i) {
         if((std::find(data.at(i).routes.begin(), data.at(i).routes.end(), route_) != data.at(i).routes.end()) && (data.at(i).type_of_vehicle == vecType_)){
-            if(data.at(i).object_type == "КП" || data.at(i).object_type == "Парк" || data.at(i).object_type == "ДС"){
-                final_.push_back(&data.at(i));
-                sz++;
-                std::vector<std::string> location = splitstring(data.at(i).location).split(',');
-                for ( std::string j : location) {
-                    stopsPerLocation.at(j)++;
-                }
+            
+            stops_.push_back(&data.at(i));
+            std::vector<std::string> location = splitstring(data.at(i).location).split(',');
+            for ( std::string j : location) {
+                stopsPerLocation.at(j)++;
             }
-            else if ((data.at(i).object_type == "Временная") || (data.at(i).object_type == "Остановка")){
-                stops_.push_back(&data.at(i));
-                std::vector<std::string> location = splitstring(data.at(i).location).split(',');
-                for ( std::string j : location) {
-                    stopsPerLocation.at(j)++;
-                }
-                sz++;
-            }
+            sz++;
         }
     }
     if(sz != 0){
@@ -148,38 +139,35 @@ double Route::findMinimalDist(Stop* curr, std::vector<Stop*>& stops){
 }
 
 void Route::calcLength(){
-    std::vector<Stop*> stops = stops_;
-    std::vector<Stop*> fin = final_;
-    Stop* start;
-    Stop* curr;
-    bool nonstop = true;
-    if(fin.size() == 1){
-        nonstop = false;
-        curr = fin.at(0);
-        length_ += findMinimalDist(curr, stops);
+    std::vector<std::vector<float>> stops(stops_.size(), std::vector<float>(stops_.size()));
+    for (int i = 0; i < stops_.size(); ++i) {
+        for (int j = 0; j < stops_.size(); ++j) {
+            stops.at(i).at(j) = getDistance(stops_.at(i)->coords, stops_.at(j)->coords);
+        }
     }
-    else if(fin.size() == 2){
-        nonstop = false;
-        curr = fin.back();
-        length_ += findMinimalDist(curr, stops);
-    }
-    else if(fin.size() == 0){
-        start = stops.back();
-        curr = start;
-        stops.pop_back();
-        length_ += findMinimalDist(curr, stops);
-    }
-    else{
-        std::invalid_argument("Shit happends");
-    }
-    while (stops.size() != 0) {
-        length_ += findMinimalDist(curr, stops);
-    }
-    if(nonstop){
-        length_ += getDistance(curr->coords, start->coords);
-    }else{
-        length_ += getDistance(curr->coords, fin.at(0)->coords);
-    }
+    std::vector<float> dist(stops_.size(), std::numeric_limits<float>::max());
+        std::vector<bool> visited (stops_.size(), false);
+     
+        float res = 0;
+     
+        dist.at(0) = 0;
+     
+        for (int i = 0; i < stops_.size(); ++i){
+            float min = std::numeric_limits<float>::max();
+            int minpos = 0;
+            for(int j = 0; j < stops_.size(); ++j){
+                if(!visited.at(j) && dist.at(j) < min){
+                    min = dist.at(j);
+                    minpos = j;
+                }
+            }
+            res += min;
+            visited.at(minpos) = true;
+            for (int j = 0; j < stops_.size(); ++j) {
+                dist.at(j) = std::min(dist.at(j), stops.at(minpos).at(j));
+            }
+            this->length_ = res;
+        }
 }
 
 CityTransport::CityTransport(const std::vector<Stop>& dat){

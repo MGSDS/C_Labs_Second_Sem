@@ -34,7 +34,6 @@ class Route{
     std::string vecType_;
     std::string route_;
     std::vector<Stop*> stops_;
-    std::vector<Stop*> final_;
     double length_;
     size_t sz;
 public:
