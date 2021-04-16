@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.h
+iterator.h
+/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.h
+
+/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.h
+iterator
+-
+
+/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/main.cpp
+iostream
+-
+CircularBuffer.h
+/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.h
+
