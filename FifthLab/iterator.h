@@ -6,44 +6,62 @@
 #define FIFTHLAB_ITERATOR_H
 
 #include <iterator>
+#include <compare>
 template<typename T>
 class iter : public std::iterator<std::random_access_iterator_tag, T> {
 protected:
     T* _ptr;
-private:
-    typedef typename std::iterator<std::random_access_iterator_tag, T>::difference_type diff_type;
+
 public:
+    typedef typename std::iterator<std::random_access_iterator_tag, T>::difference_type difference_type;
+    typedef typename std::iterator<std::random_access_iterator_tag, T>::value_type value_type;
+    typedef typename std::iterator<std::random_access_iterator_tag, T>::reference reference;
     iter() : _ptr(nullptr) {}
-    explicit iter(T& element) : _ptr(&element){}
-    iter(const iter<T> &rhs) : _ptr(rhs._ptr) {}
+    explicit iter(reference rhs) : _ptr(&rhs){}
+    iter(const iter& rhs) : _ptr(rhs._ptr) {}
 
-    inline iter<T>& operator=(const iter<T> &rhs) {_ptr = rhs._ptr; return *this;}
+    
+    inline iter& operator=(const iter& rhs){this->_ptr = rhs._ptr; return *this;}
 
-    inline iter<T>& operator+=(diff_type rhs) {_ptr += rhs; return *this;}
-    inline iter<T>& operator-=(diff_type rhs) {_ptr -= rhs; return *this;}
-    inline iter<T>& operator++() {++_ptr; return *this;}
-    inline iter<T>& operator--() {--_ptr; return *this;}
-    inline iter<T> operator++(int) {iter<T> tmp(*this); ++_ptr; return tmp;}
-    inline iter<T> operator--(int) {iter<T> tmp(*this); --_ptr; return tmp;}
-    inline iter<T> operator+(const iter<T>& rhs) {return iter<T>(_ptr+rhs.ptr);}
-    inline iter<T> operator-(const iter<T>& rhs) {return iter<T>(_ptr-rhs.ptr);}
-    inline iter<T> operator+(diff_type rhs) {return iter<T>(_ptr+rhs);}
-    inline iter<T> operator-(diff_type rhs) {return iter<T>(_ptr-rhs);}
-    friend inline iter<T> operator+(diff_type lhs, const iter<T>& rhs) {return iter<T>(lhs+rhs._ptr);}
-    friend inline iter<T> operator-(diff_type lhs, const iter<T>& rhs) {return iter<T>(lhs-rhs._ptr);}
 
     inline T& operator*() {return *_ptr;}
     inline T* operator->() {return _ptr;}
+    inline iter& operator++(){++_ptr; return *this;}
+    inline iter operator++(int){iter tmp = *this; ++*this; return tmp;}
+    inline iter& operator--(){--_ptr; return *this;}
+    inline iter operator--(int){iter tmp = *this; --*this; return tmp;}
 
-    inline T& operator[](diff_type rhs) {return _ptr[rhs];}
 
-    inline bool operator<=>(const iter<T> rhs){return _ptr <=> rhs._ptr;}
+    iter& operator+=(int n){
+        difference_type m = n;
+        if (m >= 0) while (m--) ++*this;
+        else while (m++) --*this;
+        return *this;
+    }
+    inline iter operator+(int n){iter temp = *this; return temp += n;}
+    friend inline iter operator+(int n, const iter<T>& it){iter temp = it; return temp += n;}
 
-private:
-    explicit iter(T* rhs) : _ptr(rhs) {}
+    inline iter& operator-=(int n){return *this += -n;}
+    inline iter operator-(int n){return *this += -n;}
+    friend inline difference_type operator-(const iter<T>& lhs, const iter<T>& rhs){return lhs._ptr - rhs._ptr;}
+
+    inline value_type& operator[](difference_type rhs) {return *(_ptr + rhs);}
+
+    auto operator<=>(const iter<T>& rhs) const =default;
+//    friend bool operator == (const iter<T>& lhs, const iter<T>& rhs){return lhs._ptr == rhs._ptr;}
+//    friend bool operator <= (const iter<T>& lhs, const iter<T>& rhs){return lhs._ptr <= rhs._ptr;}
+//    friend bool operator < (const iter<T>& lhs, const iter<T>& rhs){return lhs._ptr < rhs._ptr;}
+//    friend bool operator != (const iter<T>& lhs, const iter<T>& rhs){return !(lhs == rhs);}
+//    friend bool operator >= (const iter<T>& lhs, const iter<T>& rhs){return lhs <= rhs;}
+//    friend bool operator > (const iter<T>& lhs, const iter<T>& rhs){return lhs < rhs;}
+
+    friend void swap (iter<T>& lhs, iter<T>& rhs){
+        T tmp = *rhs;
+        *rhs = *lhs;
+        *lhs = tmp;
+    }
 
 };
-
 
 
 #endif //FIFTHLAB_ITERATOR_H

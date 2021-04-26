@@ -1,11 +1,12 @@
 #include <iostream>
 #include <vector>
+#include <set>
 
 namespace custom_general_algo {
 
     template<class InputIt, class T>
     bool all_of(InputIt first, InputIt last, const T &pred) {
-        for (InputIt i = first; i < last; ++i) {
+        for (InputIt i = first; i != last; ++i) {
             if (!pred(*i)) {
                 return false;
             }
@@ -15,7 +16,7 @@ namespace custom_general_algo {
 
     template<class InputIt, class T>
     bool any_of(InputIt first, InputIt last, const T &pred) {
-        for (InputIt i = first; i < last; ++i) {
+        for (InputIt i = first; i != last; ++i) {
             if (pred(*i)) {
                 return true;
             }
@@ -25,7 +26,7 @@ namespace custom_general_algo {
 
     template<class InputIt, class T>
     bool none_of(InputIt first, InputIt last, const T &pred) {
-        for (InputIt i = first; i < last; ++i) {
+        for (InputIt i = first; i != last; ++i) {
             if (pred(*i)) {
                 return false;
             }
@@ -36,7 +37,7 @@ namespace custom_general_algo {
     template<class InputIt, class T>
     bool one_of(InputIt first, InputIt last, const T &pred) {
         size_t count = 0;
-        for (InputIt i = first; i < last; ++i) {
+        for (InputIt i = first; i != last; ++i) {
             if (pred(*i)) {
                 count++;
             }
@@ -48,7 +49,8 @@ namespace custom_general_algo {
 
     template<class InputIt, class T>
     bool is_sorted(InputIt first, InputIt last, const T &pred) {
-        for (InputIt i = first; i < last - 1; ++i) {
+        last--;
+        for (InputIt i = first; i != last; ++i) {
             if (!pred(*i, *(i + 1))) {
                 return false;
             }
@@ -60,7 +62,7 @@ namespace custom_general_algo {
     bool is_partitioned(InputIt first, InputIt last, const T &pred) {
         bool flag = false;
         bool predres = pred(*first);
-        for (InputIt i = first+1; i < last; ++i) {
+        for (InputIt i = first++; i != last; ++i) {
             if (pred(*i) != predres) {
                 if(!flag){
                     flag = true;
@@ -76,7 +78,7 @@ namespace custom_general_algo {
 
     template<class InputIt, typename T>
     InputIt find_not(InputIt first, InputIt last, const T &element) {
-        for (InputIt i = first; i < last; ++i) {
+        for (InputIt i = first; i != last; ++i) {
             if(*i != element){
                 return i;
             }
@@ -96,6 +98,7 @@ namespace custom_general_algo {
 
     template<class InputIt>
     bool is_palindrome(InputIt first, InputIt last) {
+        std::enable_if//TODO
         for (size_t i = 0; i <= (last - first) / 2; ++i) {
             if(*(first + i) != *(last - i - 1)){
                 return false;
@@ -118,7 +121,7 @@ struct Comp2{
 };
 
 int main() {
-    std::vector<int> arr = {1, 2, 5, 6, -1};
+    std::set<int> arr = {1, 2, 5, 6, -1};
     std::cout << custom_general_algo::all_of(arr.begin(), arr.end(), Comp1()) << std::endl;
     std::cout << custom_general_algo::any_of(arr.begin(), arr.end(), Comp1()) << std::endl;
     std::cout << custom_general_algo::none_of(arr.begin(), arr.end(), Comp1()) << std::endl;

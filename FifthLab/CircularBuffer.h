@@ -68,11 +68,13 @@ public:
     }
 
     iterator begin(){
-        return iterator(_array[0]);
+        iter<value_type> it(_array[0]);
+        return it;
     }
 
     iterator end(){
-        return iterator(_array[_size]);
+        iter<value_type> it(_array[_size]);
+        return it;
     }
 
 
@@ -94,7 +96,7 @@ public:
     }
 
     void push_back(const_reference value){
-        reserve(_size + 1);
+        reserve(_size * 2);
         _array[_size++] = value;
     }
 
