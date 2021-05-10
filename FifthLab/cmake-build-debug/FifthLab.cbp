@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug"/>
+				<Option working_dir="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug"/>
+				<Option working_dir="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug"/>
+				<Option working_dir="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="FifthLab">
-				<Option output="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/FifthLab" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug"/>
+				<Option output="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/FifthLab" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 FifthLab"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 FifthLab"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="FifthLab/fast">
-				<Option output="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/FifthLab" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug"/>
+				<Option output="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/FifthLab" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,29 +73,29 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 FifthLab/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 FifthLab/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.cpp">
+		<Unit filename="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/CircularBuffer.cpp">
 			<Option target="FifthLab"/>
 		</Unit>
-		<Unit filename="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.h">
+		<Unit filename="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/CircularBuffer.h">
 			<Option target="FifthLab"/>
 		</Unit>
-		<Unit filename="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.cpp">
+		<Unit filename="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/iterator.cpp">
 			<Option target="FifthLab"/>
 		</Unit>
-		<Unit filename="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.h">
+		<Unit filename="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/iterator.h">
 			<Option target="FifthLab"/>
 		</Unit>
-		<Unit filename="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/main.cpp">
+		<Unit filename="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/main.cpp">
 			<Option target="FifthLab"/>
 		</Unit>
-		<Unit filename="/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CMakeLists.txt">
+		<Unit filename="/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/211.6693.114/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/billwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/bwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/211.6693.114/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
+RM = "/Users/billwilliams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab
+CMAKE_SOURCE_DIR = /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/FifthLab.dir/depend.make
@@ -78,42 +78,42 @@ include CMakeFiles/FifthLab.dir/flags.make
 
 CMakeFiles/FifthLab.dir/main.cpp.o: CMakeFiles/FifthLab.dir/flags.make
 CMakeFiles/FifthLab.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FifthLab.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FifthLab.dir/main.cpp.o -c /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FifthLab.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FifthLab.dir/main.cpp.o -c /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/main.cpp
 
 CMakeFiles/FifthLab.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FifthLab.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/main.cpp > CMakeFiles/FifthLab.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/main.cpp > CMakeFiles/FifthLab.dir/main.cpp.i
 
 CMakeFiles/FifthLab.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FifthLab.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/main.cpp -o CMakeFiles/FifthLab.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/main.cpp -o CMakeFiles/FifthLab.dir/main.cpp.s
 
 CMakeFiles/FifthLab.dir/CircularBuffer.cpp.o: CMakeFiles/FifthLab.dir/flags.make
 CMakeFiles/FifthLab.dir/CircularBuffer.cpp.o: ../CircularBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FifthLab.dir/CircularBuffer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FifthLab.dir/CircularBuffer.cpp.o -c /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FifthLab.dir/CircularBuffer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FifthLab.dir/CircularBuffer.cpp.o -c /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/CircularBuffer.cpp
 
 CMakeFiles/FifthLab.dir/CircularBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FifthLab.dir/CircularBuffer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.cpp > CMakeFiles/FifthLab.dir/CircularBuffer.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/CircularBuffer.cpp > CMakeFiles/FifthLab.dir/CircularBuffer.cpp.i
 
 CMakeFiles/FifthLab.dir/CircularBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FifthLab.dir/CircularBuffer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.cpp -o CMakeFiles/FifthLab.dir/CircularBuffer.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/CircularBuffer.cpp -o CMakeFiles/FifthLab.dir/CircularBuffer.cpp.s
 
 CMakeFiles/FifthLab.dir/iterator.cpp.o: CMakeFiles/FifthLab.dir/flags.make
 CMakeFiles/FifthLab.dir/iterator.cpp.o: ../iterator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FifthLab.dir/iterator.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FifthLab.dir/iterator.cpp.o -c /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FifthLab.dir/iterator.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FifthLab.dir/iterator.cpp.o -c /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/iterator.cpp
 
 CMakeFiles/FifthLab.dir/iterator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FifthLab.dir/iterator.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.cpp > CMakeFiles/FifthLab.dir/iterator.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/iterator.cpp > CMakeFiles/FifthLab.dir/iterator.cpp.i
 
 CMakeFiles/FifthLab.dir/iterator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FifthLab.dir/iterator.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.cpp -o CMakeFiles/FifthLab.dir/iterator.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/iterator.cpp -o CMakeFiles/FifthLab.dir/iterator.cpp.s
 
 # Object files for target FifthLab
 FifthLab_OBJECTS = \
@@ -129,7 +129,7 @@ FifthLab: CMakeFiles/FifthLab.dir/CircularBuffer.cpp.o
 FifthLab: CMakeFiles/FifthLab.dir/iterator.cpp.o
 FifthLab: CMakeFiles/FifthLab.dir/build.make
 FifthLab: CMakeFiles/FifthLab.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable FifthLab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable FifthLab"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FifthLab.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -142,6 +142,6 @@ CMakeFiles/FifthLab.dir/clean:
 .PHONY : CMakeFiles/FifthLab.dir/clean
 
 CMakeFiles/FifthLab.dir/depend:
-	cd /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/CMakeFiles/FifthLab.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/CMakeFiles/FifthLab.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/FifthLab.dir/depend
 

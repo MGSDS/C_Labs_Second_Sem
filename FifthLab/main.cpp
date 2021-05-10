@@ -3,12 +3,18 @@
 #include "CircularBuffer.h"
 
 int main() {
-    std::vector<int>
     CircularBuffer<int> buf;
+    buf.resize(5, 10);
+    buf.pop_front();
+    buf.pop_front();
+    buf.pop_front();
+    buf.push_back(7);
     buf.push_back(3);
-    buf.push_back(1);
-    buf.push_back(5);
+    buf.push_back(100);
+    std::cout << '\n';
     std::sort(buf.begin(), buf.end());
-    std::cout<<(buf.at(4));
+    for (auto& i : buf) {
+        std::cout << i << ' ';
+    }
     return 0;
 }

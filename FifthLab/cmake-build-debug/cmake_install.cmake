@@ -1,4 +1,4 @@
-# Install script for directory: /Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab
+# Install script for directory: /Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

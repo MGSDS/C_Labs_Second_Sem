@@ -21,14 +21,20 @@ public:
 private:
     value_type* _array;
     size_type _size;
-    size_type _maxSize;
+    size_type _capacity;
+    iterator _begin;
+    iterator _end;
+    size_type _beginPos;
+    //value_type* front;
 
 public:
-    explicit CircularBuffer(size_type sz = 0,value_type x = value_type()) : _size(sz), _maxSize(sz + 5){
-        _array = new value_type[sz];
+    explicit CircularBuffer(size_type sz = 0,value_type x = value_type()) : _size(sz), _capacity(sz + 5), _beginPos(0){
+        _array = new value_type[_capacity];
         for (size_type i = 0; i < _size; ++i) {
             _array[i] = x;
         }
+        _begin = iterator(_array[0], _capacity, _array[0], _beginPos);
+        _end = iterator(_array[0], _capacity, _array[0], _beginPos);
     }
 
     CircularBuffer(const CircularBuffer<value_type>& bf){
@@ -40,13 +46,16 @@ public:
         _array = tmp;
         _array = bf._array;
         _size = bf._size;
-        _maxSize = bf._maxSize;
+        _capacity = bf._capacity;
+        _begin = bf._begin;
+        _end = bf._end;
+        _beginPos = bf._beginPos;
         delete[] tmp2;
         return this;
     }
 
     CircularBuffer& operator=(const CircularBuffer<value_type>& bf){
-        this = CircularBuffer(bf);
+        *this = CircularBuffer(bf);
         return *this;
     }
 
@@ -57,9 +66,12 @@ public:
     bool operator==(const CircularBuffer<value_type>& bf){
         if(bf._size != _size)
             return false;
-        for (size_type i = 0; i < bf._size; ++i)
-            if (_array[i] != bf._array[i])
+        iterator b = bf.begin();
+        for(iterator a = begin() ; a != end(); ++a){
+            if(a != b)
                 return false;
+            ++b;
+        }
         return true;
     }
 
@@ -68,53 +80,81 @@ public:
     }
 
     iterator begin(){
-        iter<value_type> it(_array[0]);
-        return it;
+        return iterator(_begin);
     }
 
     iterator end(){
-        iter<value_type> it(_array[_size]);
-        return it;
+        return iterator(_end);
     }
 
 
 
     iterator cbegin(){
-        return const_iterator(_array[0]);
+        return const_iterator(_begin);
     }
 
     iterator cend(){
-        return const_iterator(_array[_size]);
+        return const_iterator(_end);
     }
 
     [[nodiscard]] size_type size(){
         return _size;
     }
 
-    size_type max_size(){
-        return _maxSize;
+    size_type capacity(){
+        return _capacity;
     }
 
     void push_back(const_reference value){
-        reserve(_size * 2);
-        _array[_size++] = value;
+        if(_capacity - 1 == _size)
+            reserve(_size + 10);
+        *_end++ = (T) value;
+        _size++;
     }
 
-    void insert(const_reference value, size_type position) {
+    void push_front(const_reference value){
+        if(_capacity - 1 == _size)
+            reserve(_size + 10);
+        *--_begin = (T) value;
+        _beginPos = _beginPos - 1 >= 0 ? _beginPos - 1 :  _beginPos - 1 + _capacity;
+        _size++;
+    }
+    void pop_front(){
+        if(_begin == _end)
+            throw std::range_error("CircularBuffer is empty");
+        _begin++;
+        _beginPos = _beginPos + 1 < _capacity ? _beginPos + 1 :  _beginPos + 1 - _capacity;
+        _size--;
+    }
+    void pop_back(){
+        if(_begin == _end)
+            throw std::range_error("CircularBuffer is empty");
+        _end--;
+        _size--;
+    }
+
+    void insert(size_type position, const_reference value) {
+        position = position % (_size + 1);
+        if(_capacity <= _size + 1){
+            reserve(_size + 10);
+        }
         if (position < _size){
-            reserve(_size + 1);
-            for (size_type i = _size - 1; i > position; --i) {
-                _array[i] = _array[i-1];
+            for (iterator i = _end; i != _begin + position; --i) {
+                T& tmp = *i;
+                tmp = *(i - 1);
             }
         }
-        else {
-            reserve(position + 1);
-        }
-        _array[position] = value;
+        T& tmp = *(_begin + position);
+        tmp = value;
+        ++_size;
+        ++_end;
     }
 
     void clear(){
         _size = 0;
+        _beginPos = 0;
+        _begin = iterator(_array[0], _capacity, _array[0], _beginPos);
+        _end = iterator(_array[_size], _capacity, _array[0], _beginPos);
     }
 
     bool empty() {
@@ -122,27 +162,44 @@ public:
     }
 
     void reserve(size_type n){
-        if(_maxSize < n)
-            resize(n);
+        if(_capacity >= n + 1){
+            return;
+        }
+        auto* tmp = new value_type[n + 1];
+        value_type* tmp2 = _array;
+        _capacity = n + 1;
+        _size = _size <= _capacity ? _size : _capacity;
+        for (size_type i = 0; i < _size; ++i) {
+            tmp[i] = *(_begin + i);
+        }
+        _array = tmp;
+        delete[] tmp2;
+        _beginPos = 0;
+        _begin = iterator(_array[0], _capacity, _array[0], _beginPos);
+        _end = iterator(_array[_size], _capacity, _array[0], _beginPos);
     }
 
-    void resize(size_type n){
+    void resize(size_type n, value_type x = value_type()){
         auto* tmp = new value_type[n];
         value_type* tmp2 = _array;
-        _maxSize = n;
-        _size = _size <= _maxSize ? _size : _maxSize;
+        _capacity = n + 1;
+        _size = _size <= _capacity - 1 ? _size : _capacity - 1;
         for (size_type i = 0; i < _size; ++i) {
-            tmp2[i] = tmp[i];
+            tmp[i] = *(_begin + i);
         }
-        for (size_type i = 0; i < _size; ++i) {
-            tmp2[i] = tmp[i];
+        for(int i = _size; i < _capacity - 1; ++i){
+            tmp[i] = x;
         }
-        delete[] tmp2;
         _array = tmp;
+        delete[] tmp2;
+        _size = n;
+        _beginPos = 0;
+        _begin = iterator(_array[0], _capacity, _array[0], _beginPos);
+        _end = iterator(_array[_size], _capacity, _array[0], _beginPos);
     }
 
     reference operator[](size_type pos){
-        return _array[pos];
+        return *(_begin + pos);
     }
 
     reference at(size_type pos){
