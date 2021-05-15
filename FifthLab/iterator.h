@@ -24,7 +24,6 @@ protected:
 public:
 
     iter() : _ptr(nullptr), _front(nullptr), _capacity(nullptr), _beginPos(nullptr){}
-    explicit iter(reference rhs,  unsigned int& capacity, reference front, unsigned int& beginPos) : _ptr(&rhs), _front(&front), _capacity(&capacity), _beginPos(&beginPos){}
     iter(const iter& rhs) : _ptr(rhs._ptr), _capacity(rhs._capacity), _front(rhs._front), _beginPos(rhs._beginPos) {}
 
 
@@ -101,7 +100,10 @@ public:
         *lhs = tmp;
     }
 
+    friend class CircularBuffer;
+
 private:
+    explicit iter(reference rhs,  unsigned int& capacity, reference front, unsigned int& beginPos) : _ptr(&rhs), _front(&front), _capacity(&capacity), _beginPos(&beginPos){}
     [[nodiscard]]
     unsigned int getPtrPos() const{
         difference_type PtrPos = std::distance(_front, _ptr);
