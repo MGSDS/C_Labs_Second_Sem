@@ -121,14 +121,14 @@ public:
     }
     void pop_front(){
         if(_begin == _end)
-            throw std::range_error("CircularBuffer is empty");
+            throw std::out_of_range("CircularBuffer is empty");
         _begin++;
         _beginPos = _beginPos + 1 < _capacity ? _beginPos + 1 :  _beginPos + 1 - _capacity;
         _size--;
     }
     void pop_back(){
         if(_begin == _end)
-            throw std::range_error("CircularBuffer is empty");
+            throw std::out_of_range("CircularBuffer is empty");
         _end--;
         _size--;
     }
@@ -196,6 +196,18 @@ public:
         _beginPos = 0;
         _begin = iterator(_array[0], _capacity, _array[0], _beginPos);
         _end = iterator(_array[_size], _capacity, _array[0], _beginPos);
+    }
+
+    reference front(){
+        if (_size == 0)
+            throw std::out_of_range("CircularBuffer is empty");
+        return *_begin;
+    }
+
+    reference back(){
+        if (_size == 0)
+            throw std::out_of_range("CircularBuffer is empty");
+        return *_end;
     }
 
     reference operator[](size_type pos){
