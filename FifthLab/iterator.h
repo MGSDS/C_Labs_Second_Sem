@@ -58,7 +58,7 @@ public:
 
     iter& operator+=(difference_type n){
         if(n != 0) {
-            difference_type ptrPos = std::distance(_front, _ptr);;
+            difference_type ptrPos = std::distance(_front, _ptr);
             difference_type newPtrPos = (ptrPos + n) % *_capacity;
             if (newPtrPos < 0)
                 newPtrPos = *_capacity + newPtrPos;
@@ -100,7 +100,7 @@ public:
         *lhs = tmp;
     }
 
-    friend class CircularBuffer;
+    template<typename> friend class CircularBuffer;
 
 private:
     explicit iter(reference rhs,  unsigned int& capacity, reference front, unsigned int& beginPos) : _ptr(&rhs), _front(&front), _capacity(&capacity), _beginPos(&beginPos){}
