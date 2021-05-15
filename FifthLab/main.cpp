@@ -11,10 +11,11 @@ int main() {
     buf.push_back(7);
     buf.push_back(3);
     buf.push_back(100);
-    std::cout << '\n';
-    std::sort(buf.begin(), buf.end());
-    for (auto& i : buf) {
-        std::cout << i << ' ';
+    for(int i = 0; i < 10; ++i){
+        buf.push_back(rand());
     }
+    std::cout << std::is_heap(buf.begin(), buf.end());
+    std::make_heap(buf.begin(), buf.end());
+    std::cout << std::is_heap(buf.begin(), buf.end());
     return 0;
 }
