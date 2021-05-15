@@ -6,29 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.cpp
+/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/CircularBuffer.cpp
 CircularBuffer.h
-/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.h
+/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/CircularBuffer.h
 
-/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.h
+/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/CircularBuffer.h
 iterator.h
-/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.h
+/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/iterator.h
 
-/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.cpp
+/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/iterator.cpp
 iterator.h
-/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.h
+/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/iterator.h
 
-/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/iterator.h
+/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/iterator.h
 iterator
 -
 compare
 -
 
-/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/main.cpp
+/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/main.cpp
 iostream
 -
 algorithm
 -
 CircularBuffer.h
-/Users/bwilliams/Documents/C-Labs-Second-Semester/FifthLab/CircularBuffer.h
+/Users/billwilliams/Projects/C_Labs_Second_Sem/FifthLab/CircularBuffer.h
 
