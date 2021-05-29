@@ -1,0 +1,3 @@
+/Users/billwilliams/Projects/C_Labs_Second_Sem/Cube/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/billwilliams/Projects/C_Labs_Second_Sem/Cube/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/billwilliams/Projects/C_Labs_Second_Sem/Cube/cmake-build-debug/CMakeFiles/Cube.dir
