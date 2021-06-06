@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/Cube.dir/main.cpp.o CMakeFiles/Cube.dir/cube.cpp.o CMakeFiles/Cube.dir/GeneticAlgorithm.cpp.o -o Cube 
